@@ -311,6 +311,12 @@ def check_module_version(port, filename):
         if not xbvers.startswith(b'31'):
             print("This script is only for XBee 3 Cellular Cat 1 AT&T")
             exit(-1)
+        if int("0x"+xbvers, 16) < int("0x31010", 16):
+            print("This XBee is running an older firmware: {}.".format(xbvers))
+            print("The firmware version must be at 31010 or later to run this script.")
+            print("Please use XCTU to update the your XBee to 3100F (which installs 31010).")
+            print("Re-run this script after you have updated to 31010.")
+            exit(-1)
         elif int(xbvers) == 31015:
             return True
         return False
