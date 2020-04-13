@@ -73,6 +73,11 @@ Please update your XBee to the latest firmware as described in the next section.
 
 ### Updating your Digi XBee 3 Cellular CAT 1 AT&T
 
+IMPORTANT!: If you are running a version older than 31010 (e.g. 3100A, 3100B, etc.),
+you will need to first update your Digi XBee with XCTU to version 3100F. This is a special
+version that updates the memory architecture and installs 31010. After you update to 31010, you can
+proceed running the update script to install 31015.
+
 Upgrade your Digi XBee 3 Cellular Cat 1 AT&T to the 
 latest firmware 31015 it is not already on it. 
 If you are using a different Digi XBee 3 Cellular module 
@@ -107,6 +112,8 @@ follow the manual for that module.
    up where it left off.
    
    Troubleshooting Tips:
+   Did you see the important note at the top regarding versions earlier than
+   31010 and using XCTU first before running the script?
    Make sure your cellular signal is strong? Move the device
    closer to a window if needed to get better line-of-sight.
    Did you run the script for the correct directory?
